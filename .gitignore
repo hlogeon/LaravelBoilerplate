@@ -2,3 +2,5 @@
 /vendor
 /.idea
 .env
+
+tests/_output/*
