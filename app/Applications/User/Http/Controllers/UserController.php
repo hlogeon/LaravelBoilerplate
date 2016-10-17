@@ -9,23 +9,41 @@ use Illuminate\Support\Collection;
 
 /**
  * User resource representation
- *
- * @Resource("Users", uri="/user")
  */
 class UserController extends BaseController
 {
     /**
-     * Show all users
+     * @SWG\Get(
      *
-     * Get a JSON representation of all the registered users.
-     *
-     * @Get("/{?page,limit}")
-     * @Versions({"v1"})
-     * @Parameters({
-     *      @Parameter("page", description="The page of results to view.", default=1),
-     *      @Parameter("limit", description="The amount of results per page.", default=10)
-     * })
-     *
+     *     path="/",
+     *     summary="Get the list of all users",
+     *     tags={"user"},
+     *     description="Pagination options can be provided(page and limit)",
+     *     consumes={"application/json"},
+     *     produces={"application/json"},
+     *     @SWG\Parameter(
+     *         name="page",
+     *         in="query",
+     *         description="Page number",
+     *         required=false,
+     *         type="integer",
+     *     ),
+     *     @SWG\Parameter(
+     *         name="limit",
+     *         in="query",
+     *         description="Items per page",
+     *         required=false,
+     *         type="integer",
+     *     ),
+     *     @SWG\Response(
+     *         response=200,
+     *         description="list of users"
+     *     ),
+     *     @SWG\Response(
+     *         response="400",
+     *         description="Invalid response",
+     *     )
+     * )
      *
      * @return \Symfony\Component\HttpFoundation\Response
      */

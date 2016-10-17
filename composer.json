@@ -14,7 +14,8 @@
         "jmikola/geojson": "^1.0",
         "gedmo/doctrine-extensions": "^3.0@dev",
         "barryvdh/laravel-cors": "^0.8.2",
-        "dingo/api": "1.0.x@dev"
+        "dingo/api": "1.0.x@dev",
+        "darkaonline/l5-swagger": "~3.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
