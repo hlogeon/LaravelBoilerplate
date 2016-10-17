@@ -45,10 +45,19 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "list of users"
+                        "description": "list of users",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/User"
+                            }
+                        }
                     },
                     "400": {
-                        "description": "Invalid response"
+                        "description": "Invalid response",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
                     }
                 }
             }
@@ -66,6 +75,29 @@
                     "format": "int32"
                 },
                 "message": {
+                    "type": "string"
+                }
+            }
+        },
+        "User": {
+            "required": [
+                "id",
+                "name",
+                "email",
+                "password"
+            ],
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "password": {
                     "type": "string"
                 }
             }

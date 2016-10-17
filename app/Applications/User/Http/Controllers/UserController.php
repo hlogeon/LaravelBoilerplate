@@ -37,11 +37,18 @@ class UserController extends BaseController
      *     ),
      *     @SWG\Response(
      *         response=200,
-     *         description="list of users"
+     *         description="List of users",
+     *         @SWG\Schema(
+     *             type="array",
+     *             @SWG\Items(ref="#/definitions/User")
+     *         )
      *     ),
      *     @SWG\Response(
      *         response="400",
      *         description="Invalid response",
+     *          @SWG\Schema(
+     *             ref="#/definitions/Error"
+     *         )
      *     )
      * )
      *
