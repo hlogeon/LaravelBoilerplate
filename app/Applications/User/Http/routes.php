@@ -11,6 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+/** @var \Dingo\Api\Routing\Router $api */
+$api = app('Dingo\Api\Routing\Router');
+
+$api->version('v1', function ($api) {
+    /** @var \Dingo\Api\Routing\Router $api */
+    $api->group(['prefix' => 'user'], function($api) {
+        $namespace = 'App\Applications\User\Http\Controllers\\';
+        /** @var \Dingo\Api\Routing\Router $api */
+        $api->get('/', ['as' => 'user.list', 'uses' => $namespace . 'UserController@index']);
+    });
 });
+

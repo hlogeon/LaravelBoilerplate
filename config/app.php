@@ -168,7 +168,7 @@ return [
          */
         
         Dingo\Api\Provider\LaravelServiceProvider::class,
-
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -178,7 +178,6 @@ return [
         App\Core\Providers\AuthServiceProvider::class,
         App\Core\Providers\EventServiceProvider::class,
         App\Core\Providers\DoctrineServiceProvider::class,
-
         App\Applications\User\Providers\UserServiceProvider::class,
         App\Applications\User\Providers\RouteServiceProvider::class,
     ],
@@ -228,6 +227,11 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+    ],
+
+
+    'entityPaths' => [
+        base_path('app/Core/Entities'),
     ],
 
 ];
