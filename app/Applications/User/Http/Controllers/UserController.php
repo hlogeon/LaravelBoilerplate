@@ -8,7 +8,7 @@ use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Collection;
 
 /**
- * User resource representation
+ * User resource representation.
  */
 class UserController extends BaseController
 {
@@ -58,6 +58,7 @@ class UserController extends BaseController
     {
         $usersCollection = Collection::make([new User(['name' => 'John Doe']), new User(['name' => 'Kyne West']), new User(['name' => 'Ada Lovelys'])]);
         $users = new LengthAwarePaginator($usersCollection->forPage(2, 1), $usersCollection->count(), 1, 2);
+
         return $this->response->item($usersCollection->first(), new UserTransformer())->setStatusCode(200);
     }
 }

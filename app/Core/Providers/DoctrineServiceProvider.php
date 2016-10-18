@@ -16,13 +16,11 @@ use Gedmo\Loggable\LoggableListener;
 use Gedmo\Sortable\SortableListener;
 use Gedmo\Translatable\TranslatableListener;
 
-
 /**
  * TODO: Configure Doctrine ODM here.
  */
 class DoctrineServiceProvider extends ServiceProvider
 {
-
     private $subscribers = [
         TreeListener::class,
         TimestampableListener::class,
@@ -31,12 +29,11 @@ class DoctrineServiceProvider extends ServiceProvider
         SortableListener::class,
         TranslatableListener::class,
     ];
-    
+
     private $entityPaths = [
-        
+
     ];
-    
-    
+
     /**
      * Bootstrap.
      *
@@ -57,8 +54,6 @@ class DoctrineServiceProvider extends ServiceProvider
         $this->registerDoctrine();
     }
 
-
-
     /**
      * @throws \Doctrine\ODM\MongoDB\Mapping\MappingException
      */
@@ -70,7 +65,7 @@ class DoctrineServiceProvider extends ServiceProvider
         $config->setHydratorDir(app_path('Core/DoctrineHydrators'));
         $config->setProxyNamespace('App\Core\DoctrineProxies');
         $config->setHydratorNamespace('App\Core\DoctrineHydrators');
-        
+
         $config->setDefaultDB(config('database.connections.mongodb.database'));
         $config->setMetadataDriverImpl(AnnotationDriver::create(config('app.entityPaths')));
         AnnotationDriver::registerAnnotationClasses();

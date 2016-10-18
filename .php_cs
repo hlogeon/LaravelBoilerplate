@@ -37,7 +37,6 @@ $fixers = [
     'phpdoc_no_package',
     'phpdoc_scalar',
     'phpdoc_short_description',
-    'phpdoc_to_comment',
     'phpdoc_trim',
     'phpdoc_type_to_var',
     'phpdoc_var_without_name',

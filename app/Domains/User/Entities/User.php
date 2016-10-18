@@ -5,7 +5,6 @@ namespace App\Domains\User\Entities;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 /**
- *
  * @SWG\Definition(required={"id", "name", "email", "password"})
  * @property $id int
  * @property $name string
