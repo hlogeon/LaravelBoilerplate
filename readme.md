@@ -16,6 +16,8 @@
  * Application(mixed with Interfaces layer) - The application layer is responsible for driving the workflow of the application, matching the use cases at hand. These operatios are interface-independent and can be both synchronous or message-driven. This layer is well suited for spanning transactions, high-level logging and security.The application layer is thin in terms of domain logic - it merely coordinates the domain layer objects to perform the actual work.
  * Infrastructure(called Core in our case) - In simple terms, the infrastructure consists of everything that exists independently of our application: external libraries, database engine, application server, messaging backend and so on. Also, we consider code and configuration files that glues the other layers to the infrastructure as part of the infrastructure layer. Doctrine configuration and mapping files and implementations of the repository interfaces are part of the infrastructure layer.
  * Domain - The domain layer is the heart of the software, and this is where the interesting stuff happens. There is one package per aggregate, and to each aggregate belongs entities, value objects, domain events, a repository interface and sometimes factories. The structure and naming of aggregates, classes and methods in the domain layer should follow the ubiquitous language, and you should be able to explain to a domain expert how this part of the software works by drawing a few simple diagrams and using the actual class and method names of the source code.
+ 
+![layers](http://image.prntscr.com/image/f65fc6d827a24b849f6a13e87b687227.jpg "Layers")
 
 ## Common replacements
 
