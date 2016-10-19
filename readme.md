@@ -30,12 +30,15 @@ You can replace packages from this boilerplate as you want. Common changes are:
 
 ## Example workflow
 
-1. Think about your contexts and define it's "borders"
-1. Create a new Application(e.g User) and describe API. Spend some time here to make API clear, easy to understand
+1. Think about the bounded context. Carefully define context borders
+1. Design API, add endpoints to the application routes, create Controller classes and Actions stubs
 2. Add dummy test cases for your API(should fail)
-3. Create your Domain and Implement business logic. Use ubiquitis language(`$user->register()` instead of `$user->create()` etc)
+3. Design Domain model(without adding real code to it)
+3. Write Unit Tests for Domain Model
+3. Implement business logic
+3. Design Data Model
 8. Refactor
-4. Write Unit tests for your domain
+8. Make sure all Unit Test are passing
 5. Add DTO objects to your Application layer
 6. Replace dummy API test with real ones
 7. Make your application API pass all the tests
