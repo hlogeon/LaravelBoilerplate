@@ -1,8 +1,12 @@
 # Laravel DDD boilerplate
 
-## Requirements:
+## Important libraries included
 
-* PHP >= 7.0
+* [Dingo API](https://github.com/dingo/api/wiki) - helps to create API's
+* [CodeCeption](http://codeception.com/quickstart) - Acceptance, Unit and Functional testing
+* [Doctrine MongoDB ODM](http://docs.doctrine-project.org/projects/doctrine-mongodb-odm/en/latest/) - Object Document Mapper(can be replace with ORM, take a look at replacements bellow)
+* [Swagger](http://swagger.io/) - API documentation tool
+* [L5-Swagger](https://github.com/DarkaOnLine/L5-Swagger) - Swagger integration for Laravel. Adding support of generating APIDocs from PHP Annotations using [Doctrine Annotations](https://github.com/doctrine/annotations)
 
 ## Architecture notes
 
@@ -24,6 +28,7 @@ You can replace packages from this boilerplate as you want. Common changes are:
 
 ## Example workflow
 
+1. Think about your contexts and define it's "borders"
 1. Create a new Application(e.g User) and describe API. Spend some time here to make API clear, easy to understand
 2. Add dummy test cases for your API(should fail)
 3. Create your Domain and Implement business logic. Use ubiquitis language(`$user->register()` instead of `$user->create()` etc)
