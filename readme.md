@@ -14,13 +14,16 @@
  * Domain - The domain layer is the heart of the software, and this is where the interesting stuff happens. There is one package per aggregate, and to each aggregate belongs entities, value objects, domain events, a repository interface and sometimes factories. The structure and naming of aggregates, classes and methods in the domain layer should follow the ubiquitous language, and you should be able to explain to a domain expert how this part of the software works by drawing a few simple diagrams and using the actual class and method names of the source code.
 
 ## Common replacements
+
 You can replace packages from this boilerplate as you want. Common changes are:
+
 1. Replace Doctrine ODM with [Doctrine ORM](https://github.com/laravel-doctrine/orm/)
 2. Add [Laravel Passport](https://laravel.com/docs/5.3/passport) for Auth
 3. Use MySQL instead of MongoDB
 4. Add migrations support (just create `database/migrations` folder) and use migrations as described in [Laravel Documentation](https://laravel.com/docs/5.3/migrations)
 
 ## Example workflow
+
 1. Create a new Application(e.g User) and describe API. Spend some time here to make API clear, easy to understand
 2. Add dummy test cases for your API(should fail)
 3. Create your Domain and Implement business logic. Use ubiquitis language(`$user->register()` instead of `$user->create()` etc)
